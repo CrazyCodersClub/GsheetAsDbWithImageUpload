@@ -50,7 +50,7 @@ public class UserList extends AppCompatActivity  {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.e("null","ser image"+response);
+                       // Log.e("null","ser image"+response);
                         showJSON(response);
 
                         loading.dismiss();
@@ -78,7 +78,7 @@ public class UserList extends AppCompatActivity  {
     private void showJSON(String json){
         JsonParser pj = new JsonParser(json);
         pj.parseJSON();
-        Log.e("uImage","ser image"+JsonParser.uImages[1]);
+        //Log.e("uImage","ser image"+JsonParser.uImages[1]);
         UserListAdapter userListAdapter = new UserListAdapter(this, JsonParser.uIds,JsonParser.uNames,JsonParser.uImages);
         listView.setAdapter(userListAdapter);
     }
