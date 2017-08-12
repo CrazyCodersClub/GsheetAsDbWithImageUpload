@@ -47,7 +47,7 @@ public class JsonParser {
                 uImages[i] = jo.getString(KEY_IMAGE);
             }
 
-            Log.e("uImage","ser image"+uImages[0]);
+           // Log.e("uImage","ser image"+uImages[0]);
         } catch (JSONException e) {
             e.printStackTrace();
         }
